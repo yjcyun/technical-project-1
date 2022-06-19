@@ -26,8 +26,8 @@ export default {
     },
   },
   props: {
-    /* id is a key of the global state `isSelected` where the value is a boolean.
-     * i.e. `isSelected={1: true, 2:false}`
+    /* id is a key of the global state object from the upvote module.
+     * i.e. `{[id: number]: {selected: true, count: 0}}`
      * id MUST be globally unique
      */
     id: {
@@ -56,7 +56,7 @@ export default {
     /* behaviour is an object with keys 'type' and 'max'.
      * `type:"limit"`: wraps in a flex container
      * `type:"scroll"`: scrolls horizontally in overflow
-     * `max: number` will limit the number of UpvoteItems
+     * `max: number` will limit the number of UpvoteItems that can be rendered
      */
     behaviour: {
       type: Object,
